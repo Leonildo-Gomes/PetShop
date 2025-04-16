@@ -2,7 +2,7 @@
 
 Aplicação de e-commerce voltada para produtos pets. O utilizador pode visualizar produtos, adicionar itens ao carrinho e marcar itens como favoritos.
 
-
+<img src="screenshot/home.png" alt="Tela de login" width="1200"/>
 
 ## Tecnologias Utilizadas:
 
@@ -48,6 +48,9 @@ A aplicação estará disponível em: `http://localhost:5173`
 
 
 ## 📂 Estrutura do Projeto
+
+```
+ src/
  ├── components/
  │   ├── header/
  │   ├── layout/
@@ -65,8 +68,9 @@ A aplicação estará disponível em: `http://localhost:5173`
  ├── services/
  │   └── api.tsx
  └── App.tsx
+ ```
 
 
 
 
- <img src="screenshot/home.png" alt="Tela de login" width="400"/>
+ ![Tela de login](screenshot/Detail.png)
