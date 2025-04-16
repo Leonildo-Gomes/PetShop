@@ -2,7 +2,7 @@
 
 Aplicação de e-commerce voltada para produtos pets. O utilizador pode visualizar produtos, adicionar itens ao carrinho e marcar itens como favoritos.
 
-<img src="screenshot/home.png" alt="Tela de login" width="1200"/>
+<img src="screenshot/home.png" alt="Home" width="1200"/>
 
 ## Tecnologias Utilizadas:
 
@@ -71,13 +71,12 @@ A aplicação estará disponível em: `http://localhost:5173`
  ```
 
 
-<img src="screenshot/home.png" alt="Tela de login" width="500"/>
+<img src="screenshot/home.png" alt="Tela de Home" width="500"/>
 
- <img src="screenshot/Detail.png" alt="Tela de login" width="500"/>
+<img src="screenshot/Detail.png" alt="Tela de Detalhe" width="500"/>
+<img src="screenshot/favorito.png" alt="Tela de favorito" width="500"/>
 
-  <img src="screenshot/favorito.png" alt="Tela de login" width="500"/>
-
-  <img src="screenshot/mobile_cary.png" alt="Tela de login" width="500"/>
-  <img src="screenshot/mobile_home.png" alt="Tela de login" width="500"/>
+<img src="screenshot/mobile_cart.png" alt="Tela de carrinho" width="500"/>
+<img src="screenshot/mobile_home.png" alt="Tela de Home Mobile" width="500"/>
 
    
