@@ -29,9 +29,9 @@ Aplicação de e-commerce voltada para produtos pets. O utilizador pode visualiz
 ## 🖥️ Como executar o projeto
 
 1. Clone o repositório:
-    ```bash
-    https://github.com/Leonildo-Gomes/PetShop.git
-    ```
+  ```bash
+  https://github.com/Leonildo-Gomes/PetShop.git
+  ```
 
 2. Instale as dependências:
   ```bash
@@ -40,9 +40,9 @@ Aplicação de e-commerce voltada para produtos pets. O utilizador pode visualiz
   ```
 
 3. Execute o projeto:
-    ```bash
-    npm run dev
-    ```
+  ```bash
+  npm run dev
+  ```
 A aplicação estará disponível em: `http://localhost:5173`
 
 
