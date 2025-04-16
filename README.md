@@ -22,4 +22,51 @@ Aplicação de e-commerce voltada para produtos pets. O utilizador pode visualiz
  - Página Detalhes do Projecto
  - Carrinho de Compras
  - Pagina de Favoritos
-```
+
+
+
+
+## 🖥️ Como executar o projeto
+
+1. Clone o repositório:
+    ```bash
+    https://github.com/Leonildo-Gomes/PetShop.git
+    ```
+
+2. Instale as dependências:
+  ```bash
+  cd petshop
+  npm install
+  ```
+
+3. Execute o projeto:
+    ```bash
+    npm run dev
+    ```
+A aplicação estará disponível em: `http://localhost:5173`
+
+
+
+## 📂 Estrutura do Projeto
+ ├── components/
+ │   ├── header/
+ │   ├── layout/
+ │   ├── loading/
+ │   └── productCart/
+ ├── context/
+ │   ├── FavoritesContext.tsx
+ │   └── CartContext.tsx
+ ├── pages/
+ │   ├── home/
+ │   ├── detail/
+ │   ├── cart/
+ │   ├── favorites/
+ │   └── notFound/
+ ├── services/
+ │   └── api.tsx
+ └── App.tsx
+
+
+
+
+ <img src="screenshot/home.png" alt="Tela de login" width="400"/>
