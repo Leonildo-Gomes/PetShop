@@ -71,6 +71,13 @@ A aplicação estará disponível em: `http://localhost:5173`
  ```
 
 
+<img src="screenshot/home.png" alt="Tela de login" width="500"/>
 
+ <img src="screenshot/Detail.png" alt="Tela de login" width="500"/>
 
- ![Tela de login](screenshot/Detail.png)
+  <img src="screenshot/favorito.png" alt="Tela de login" width="500"/>
+
+  <img src="screenshot/mobile_cary.png" alt="Tela de login" width="500"/>
+  <img src="screenshot/mobile_home.png" alt="Tela de login" width="500"/>
+
+   
