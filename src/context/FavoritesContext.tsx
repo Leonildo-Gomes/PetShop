@@ -3,7 +3,7 @@ import { ProductProps } from "../pages/home";
 
 
 interface FavoriteProps { 
-    id: number;
+    id: string;
     title: string;
     description: string;
     price: number;
@@ -13,7 +13,7 @@ interface FavoriteProps {
  interface FavoriteContextData {
     favorites: FavoriteProps[]; 
     toggleFavorite: (product: ProductProps) => void;
-    isFavorites: (productId: number) => boolean;
+    isFavorites: (productId: string) => boolean;
     amount: number;
  }
 
@@ -29,7 +29,7 @@ function FavoriteProvider({ children }: FavoriteProviderProps) {
     const [ favorites, setFavorites]= useState<FavoriteProps[]>([]);
 
 
-    function isFavorites(productId: number ): boolean { 
+    function isFavorites(productId: string ): boolean { 
         return favorites.some(item => item.id === productId);
     }
     function toggleFavorite(product: ProductProps) {

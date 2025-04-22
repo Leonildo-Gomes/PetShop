@@ -1,10 +1,11 @@
+import { collection, getDocs } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 import { Loading } from '../../components/loading';
 import { ProductCart } from '../../components/productCart';
-import { api } from '../../services/api';
+import { db } from '../../services/firebaseConnection';
 export interface ProductProps {
-    id: number;
+    id: string;
     title: string;
     description: string;
     price: number;
@@ -22,16 +23,39 @@ export function Home() {
     
     useEffect(() => { 
         async function loadProducts() {
-            const response= await api.get('/products');
+            const docRef= collection(db, "products"); 
+             getDocs(docRef)
+             .then((snapshot) => {
+                 const list: ProductProps[] = [];
+                 snapshot.forEach((doc) => {
+                     list.push({
+                         id: doc.id,
+                         title: doc.data().title,
+                         description: doc.data().description,
+                         price: doc.data().price,
+                         cover: doc.data().cover,
+                         category: doc.data().category
+                     });
+                 });
+                 setProducts(list); 
+             })
+             .catch((error) => {     
+                 toast.error("Impossivel carregar produtos!! ERRO: "+ error);      
+             }); 
+            
+            /*const response= await api.get('/products');
             if(response.status !== 200) {
                 toast.error("Impossivel carregar produtos");
                 return
             }   
-            setProducts(response.data);  
+            setProducts(response.data); */
+            
             setLoading(false); 
+            
         }
         loadProducts(); 
     }, [])  
+   
     
     const filteredProducts = selectedCategory === "All" 
             ? products : products.filter(product => product.category === selectedCategory); 

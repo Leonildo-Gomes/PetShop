@@ -15,6 +15,7 @@ Aplicação de e-commerce voltada para produtos pets. O utilizador pode visualiz
 - [React Icons](https://react-icons.github.io/react-icons/) - Biblioteca de ícones para React
 - [Axios](https://axios-http.com/docs/intro) - Cliente HTTP baseado em Promises para fazer requisições
 - [Json Server](https://github.com/typicode/json-server) - Biblioteca para criar uma API REST fake para desenvolvimento e testes
+- [Firebase](https://firebase.google.com/) - Para criar a API REST dos produtos
 
 ## Funcionalidads:
 
