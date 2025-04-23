@@ -5,11 +5,11 @@ interface CartContextData {
     cartAmount: number; 
     total:string;
     addToCart: (product: ProductProps) => void; 
-    removeFromCart: (productId: number) => void; 
-    deleteFromCart: (productId: number) => void; 
+    removeFromCart: (productId: string) => void; 
+    deleteFromCart: (productId: string) => void; 
 }
 interface CartProps {
-    id: number;
+    id: string;
     title: string;
     description: string;
     price: number;
@@ -50,7 +50,7 @@ function CartProvider({ children }: CartProviderProps)  {
         calculateTotal([...cart, product]); 
 
     }
-    function removeFromCart(productId: number) {
+    function removeFromCart(productId: string) {
         const productIndex = cart.findIndex(item => item.id === productId); 
         if(cart[productIndex]?.amount> 1) {
             const cartList=cart; 
@@ -63,7 +63,7 @@ function CartProvider({ children }: CartProviderProps)  {
         deleteFromCart(productId);    
     }
 
-    function deleteFromCart(productId: number) { 
+    function deleteFromCart(productId: string) { 
         const cartList = cart.filter(item => item.id !== productId); 
         setCart(cartList); 
         calculateTotal(cartList); 
