@@ -46,6 +46,18 @@ Aplicação de e-commerce voltada para produtos pets. O utilizador pode visualiz
   ```bash
   npm run dev
   ```
+
+4.Configure as variáveis de ambiente:
+  - Crie um arquivo .env na raiz do projecto a adicione as seguintes variaveis de ambiente do firebase:
+  ```bash
+  VITE_FIREBASE_API_KEY= 
+  VITE_FIREBASE_AUTH_DOMAIN= 
+  VITE_FIREBASE_PROJECT_ID= 
+  VITE_FIREBASE_STORAGE_BUCKET= 
+  VITE_FIREBASE_MESSAGING_SENDER_ID= 
+  VITE_FIREBASE_APP_ID=
+  ```
+  - certifique -se de subsituir os valores de exemplo pelas informacoes do seu projeto Firebase
 A aplicação estará disponível em: `http://localhost:5173`
 
 
