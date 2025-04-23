@@ -2,6 +2,8 @@
 
 Aplicação de e-commerce voltada para produtos pets. O utilizador pode visualizar produtos, adicionar itens ao carrinho e marcar itens como favoritos.
 
+- https://pet-shop-self-iota.vercel.app/
+
 <img src="screenshot/home.png" alt="Home" width="1200"/>
 
 ## Tecnologias Utilizadas:
