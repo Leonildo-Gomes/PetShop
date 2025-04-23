@@ -67,6 +67,7 @@ A aplicação estará disponível em: `http://localhost:5173`
  │   ├── favorites/
  │   └── notFound/
  ├── services/
+ │   ├── firebaseConnection/
  │   └── api.tsx
  └── App.tsx
  ```
