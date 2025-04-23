@@ -1,4 +1,5 @@
 
+import { doc, getDoc } from 'firebase/firestore';
 import { useContext, useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 import { BiSolidCartAdd } from "react-icons/bi";
@@ -7,18 +8,29 @@ import { FaArrowLeft } from "react-icons/fa6";
 import { Link, useParams } from 'react-router-dom';
 import { Loading } from '../../components/loading';
 import { CartContext } from '../../context/CartContext';
-import { api } from '../../services/api';
+import { db } from '../../services/firebaseConnection';
 import { ProductProps } from '../home';
 export function DetailProduct() { 
     const  { id } = useParams(); 
     const [product, setProduct] = useState<ProductProps> ();
     const [loading, setLoading] = useState<boolean> (true);
     const  {  addToCart}= useContext(CartContext);
+    const colectionName: string='products';
 
     useEffect(()=>{ 
         async function loadProduct() {
-            
-            try {
+            const docRef= doc(db, colectionName, id!); 
+            getDoc(docRef)
+            .then ((doc) => {
+                if(doc.exists()) {
+                    setProduct(doc.data() as ProductProps); 
+                }
+            }).catch((error) => {     
+                toast.error("Impossivel carregar produto!! ERRO: "+ error);      
+            }).finally(() => {
+                setLoading(false); 
+            }); 
+            /*try {
                 const response= await api.get(`/products/${id}`); 
                 setProduct(response.data);
             } catch (error) {
@@ -29,7 +41,7 @@ export function DetailProduct() {
                 }, 5000);
             }finally {
                  setLoading(false); 
-            } 
+            } */
         }
         loadProduct(); 
      } , [id]) 

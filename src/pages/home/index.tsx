@@ -70,9 +70,10 @@ export function Home() {
                     <div className='flex flex-wrap justify-center gap-4 py-4'>
                         {categories.map((category) => (
                              <button key={category} onClick={() => setSelectedCategory(category)} 
-                                    className={`px-6 py-2 rounded-full font-medium transition-colors
-                             ${selectedCategory === category ? 'bg-teal-600 text-white' : 'bg-white text-teal-600 '} shadow-sm`}>
-                                 {category}
+                                className={`px-6 py-2 rounded-full font-medium transition-colors
+                                ${selectedCategory === category ? 'bg-teal-600 text-white' : 'bg-white text-teal-600 '} shadow-sm`}
+                             >
+                                {category}
                              </button>
                         ))}
 
